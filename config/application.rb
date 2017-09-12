@@ -13,7 +13,7 @@ module RetroNotesApi
     # -- all .rb files in that directory are automatically loaded.
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins "https://retro-notes.herokuapp.com"
+        origins "https://la-retro-notes.herokuapp.com"
         resource '*', :headers => :any, :methods => [:get, :post, :delete, :patch, :options]
       end
     end
