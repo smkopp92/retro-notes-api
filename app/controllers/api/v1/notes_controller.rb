@@ -35,7 +35,7 @@ class Api::V1::NotesController < ApplicationController
   end
 
   def set_headers
-    headers['Access-Control-Allow-Origin'] = "http://localhost:3000"
+    headers['Access-Control-Allow-Origin'] = "https://la-retro-notes.herokuapp.com"
     headers['Access-Control-Allow-Methods'] = 'POST, PUT, PATCH, DELETE, GET, OPTIONS'
     headers['Access-Control-Request-Method'] = '*'
     headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
