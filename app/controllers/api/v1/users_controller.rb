@@ -7,7 +7,11 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    session[:user] = request.env["omniauth.auth"]["info"]["first_name"]
+    if request.env["omniauth.auth"]["info"]["teams"].select{|team| team["name"] == "Admins"}.any?
+      session[:user] = request.env["omniauth.auth"]["info"]["first_name"]
+    else
+      session[:user] = nil
+    end
     redirect_to "http://localhost:3000"
   end
 
