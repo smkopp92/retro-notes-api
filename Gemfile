@@ -13,6 +13,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'httparty'
 gem 'dotenv-rails'
+gem "omniauth-launch-pass",
+  github: "launchacademy/omniauth-launch-pass"
 
 gem 'faker'
 # Use postgresql as the database for Active Record
